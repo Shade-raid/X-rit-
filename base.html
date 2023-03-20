@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Street Dog Tracker</title>
+    <title>Dog Spotter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>Street Dog Tracker</h1>
-    <p id="status">Getting your location...</p>
-    <form>
-      <input type="file" id="dog-picture" accept="image/*">
-      <input type="submit" value="Upload">
-    </form>
-    <p id="location"></p>
+    <header>
+      <div class="logo">
+        <img src="dog-icon.png" alt="Dog Spotter Logo">
+        <h1>Dog Spotter</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="upload-form">
+        <form>
+          <h2>Upload a Picture of a Dog</h2>
+          <input type="file" id="dog-picture" accept="image/*">
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <div id="map"></div>
+    </main>
+    <footer>
+      <p>&copy; 2023 Dog Spotter. All rights reserved.</p>
+    </footer>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="index.js"></script>
   </body>
 </html>
